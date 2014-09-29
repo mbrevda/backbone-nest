@@ -3,6 +3,7 @@ var browserify  = require('browserify'),
     gulp	    = require('gulp'),
     gutil	    = require('gulp-util'),
     gulpif	    = require('gulp-if'),
+    jsdom	    = require('jsdom'),
     jshint      = require('gulp-jshint'),
     minimist    = require('minimist'),
     mocha	    = require('gulp-mocha'),
@@ -66,6 +67,11 @@ gulp.task('lint', function(){
 })
 
 gulp.task('test', ['lint'], function(){
+    // set up window and jquery
+    global.window = jsdom.jsdom('').parentWindow
+    global.document = window.document
+    global.window.$ = require('jquery')
+
     return gulp.src(['tests/*Test.js'], { read: false })
         .pipe(mocha({
             reporter: 'spec'
@@ -73,6 +79,11 @@ gulp.task('test', ['lint'], function(){
 })
 
 gulp.task('testc', ['lint'], function(){
+    // set up window and jquery
+    global.window = jsdom.jsdom('').parentWindow
+    global.document = window.document
+    global.window.$ = require('jquery')
+
     return gulp.src(['tests/*Test.js'], { read: false })
         .pipe(gulpif(args.cover, cover.instrument({
             pattern: [

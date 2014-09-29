@@ -29,7 +29,8 @@
   "homepage": "https://github.com/mbrevda/backbone-nest",
   "dependencies": {
     "backbone": "^1",
-    "jquery": "^2",
+    "jquery": "^2.1.1",
+    "jsdom": "^1.0.0",
     "underscore": "^1"
   },
   "devDependencies": {
