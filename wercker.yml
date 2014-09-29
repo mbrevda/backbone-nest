@@ -14,7 +14,6 @@ deploy:
         - script:
             name: publish package
             code: |
-                exit;
                 git config user.email 'pleasemailus@wercker.com'
                 git config user.name 'werckerbot'
                 git checkout $WERCKER_GIT_BRANCH
