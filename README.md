@@ -15,6 +15,7 @@ npm install backbone-nest --save
 
 ## CI
 Nest continuous integrations is handled by Wercker:
+
 [![wercker status](https://app.wercker.com/status/8aa67dbf948a32aaac56180aac9798e6/s "wercker status")](https://app.wercker.com/project/bykey/8aa67dbf948a32aaac56180aac9798e6)
 
 ## Testing
