@@ -65,7 +65,7 @@ In this case, the model will have an attribute of `foo`, as well as a nested col
 model.capitals
 ```
 
-`capitals` can be accessed fluently like any standard Backbone.Collection (which is what it is). So to access the models:
+`capitals` can be accessed fluently like any standard Backbone.Collection (which is what it is). So to access the first model:
 
 ```js
 model.capitals.at(0)
